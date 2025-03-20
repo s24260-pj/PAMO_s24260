@@ -26,7 +26,7 @@ Projekt Kalkulator BMI powstał w ramach zajęć PAMO. Celem aplikacji jest umo�
 ### Kroki instalacji
 **Sklonuj repozytorium:**
 ```bash
-
+https://github.com/s24260-pj/PAMO_s24260.git
 ```
 ## Autor
 Artur Szulc s24260@pjwstk.edu.pl
