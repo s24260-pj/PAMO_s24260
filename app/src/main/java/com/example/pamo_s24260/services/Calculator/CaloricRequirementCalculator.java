@@ -3,7 +3,7 @@ package com.example.pamo_s24260.services.Calculator;
 import com.example.pamo_s24260.R;
 
 public class CaloricRequirementCalculator {
-    public double calculate(
+    public float calculate(
             double weight,
             double height,
             int age,
@@ -18,7 +18,7 @@ public class CaloricRequirementCalculator {
                 age
         );
 
-        return bmr * activityFactor;
+        return (float) (bmr * activityFactor);
     }
 
     private double getActivityFactorByActivityIndex(int index) {

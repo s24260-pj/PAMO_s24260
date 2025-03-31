@@ -29,4 +29,13 @@
     </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recommended_recipes">Proponowane przepisy:</string>
+    <string name="sth_went_wrong">Coś poszło nie tak</string>
+
+    <string name="error_invalid_weight">Proszę wprowadzić poprawną wagę!</string>
+    <string name="error_invalid_height">Proszę wprowadzić poprawny wzrost!</string>
+    <string name="error_invalid_age">Proszę wprowadzić poprawny wiek!</string>
+
+    <string name="caloric_requirement_text">Twoje zapotrzebowanie kaloryczne: %1$d kcal</string>
+    <string name="recipe_item_text">- %1$s (%2$d kcal)\n  %3$s\n  Autor: %4$s</string>
 </resources>

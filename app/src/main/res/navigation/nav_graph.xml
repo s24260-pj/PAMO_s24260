@@ -29,7 +29,7 @@
         android:id="@+id/homepageFragment"
         android:name="com.example.pamo_s24260.HomepageFragment"
         android:label="@string/homepage"
-        tools:layout="@layout/fragment_homepage" >
+        tools:layout="@layout/fragment_homepage">
         <action
             android:id="@+id/homepage_to_bmi_calculator_action"
             app:destination="@id/CalculatorFragment" />
@@ -42,5 +42,18 @@
         android:name="com.example.pamo_s24260.CaloriesCalculatorFragment"
         android:label="@string/calories_calculator_fragment"
         tools:layout="@layout/fragment_calories_calculator">
+        <action
+            android:id="@+id/calories_calculator_to_caloric_requirement_summary_action"
+            app:destination="@id/caloricRequirementSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caloricRequirementSummaryFragment"
+        android:name="com.example.pamo_s24260.CaloricRequirementSummaryFragment"
+        android:label="fragment_caloric_requirement_summary"
+        tools:layout="@layout/fragment_caloric_requirement_summary">
+
+        <argument
+            android:name="totalDailyEnergyExpenditure"
+            app:argType="float" />
     </fragment>
 </navigation>

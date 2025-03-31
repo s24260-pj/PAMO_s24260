@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,17 +56,17 @@ public class CaloriesCalculatorFragment extends Fragment {
             int selectedActivityIndex = spinnerActivityLevel.getSelectedItemPosition();
 
             if (!CaloriesFormValidator.isValidWeight(weightStr)) {
-                inputWeight.setError("Proszę wprowadzić poprawną wagę!");
+                inputWeight.setError(getString(R.string.error_invalid_weight));
                 return;
             }
 
             if (!CaloriesFormValidator.isValidHeight(heightStr)) {
-                inputHeight.setError("Proszę wprowadzić poprawny wzrost!");
+                inputHeight.setError(getString(R.string.error_invalid_height));
                 return;
             }
 
             if (!CaloriesFormValidator.isValidAge(ageStr)) {
-                inputAge.setError("Proszę wprowadzić poprawny wiek!");
+                inputAge.setError(getString(R.string.error_invalid_age));
                 return;
             }
 
@@ -87,7 +88,7 @@ public class CaloriesCalculatorFragment extends Fragment {
             double height = Double.parseDouble(heightStr);
             int age = Integer.parseInt(ageStr);
 
-            double totalDailyEnergyExpenditure = caloricRequirementCalculator.calculate(
+            float totalDailyEnergyExpenditure = caloricRequirementCalculator.calculate(
                     weight,
                     height,
                     age,
@@ -95,7 +96,11 @@ public class CaloriesCalculatorFragment extends Fragment {
                     selectedActivityIndex
             );
 
-            System.out.println(totalDailyEnergyExpenditure);
+            var action = CaloriesCalculatorFragmentDirections.caloriesCalculatorToCaloricRequirementSummaryAction(
+                    totalDailyEnergyExpenditure
+            );
+
+            Navigation.findNavController(v).navigate(action);
         });
         return view;
     }
