@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/CalculatorFragment">
+    app:startDestination="@id/homepageFragment">
 
     <fragment
         android:id="@+id/CalculatorFragment"
@@ -24,5 +24,23 @@
         <argument
             android:name="bmi"
             app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.example.pamo_s24260.HomepageFragment"
+        android:label="@string/homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/homepage_to_bmi_calculator_action"
+            app:destination="@id/CalculatorFragment" />
+        <action
+            android:id="@+id/homepage_to_calories_calculator_action"
+            app:destination="@id/caloriesCalculatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caloriesCalculatorFragment"
+        android:name="com.example.pamo_s24260.CaloriesCalculatorFragment"
+        android:label="@string/calories_calculator_fragment"
+        tools:layout="@layout/fragment_calories_calculator">
     </fragment>
 </navigation>
