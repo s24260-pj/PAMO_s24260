@@ -49,7 +49,7 @@
     <fragment
         android:id="@+id/caloricRequirementSummaryFragment"
         android:name="com.example.pamo_s24260.CaloricRequirementSummaryFragment"
-        android:label="fragment_caloric_requirement_summary"
+        android:label="@string/fragment_total_daily_energy_expenditure_summary"
         tools:layout="@layout/fragment_caloric_requirement_summary">
 
         <argument
