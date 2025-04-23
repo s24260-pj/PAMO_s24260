@@ -1,5 +1,6 @@
 package com.example.pamo_s24260;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ public class SummaryFragment extends Fragment {
 
     }
 
+    @SuppressLint("DefaultLocale")
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
