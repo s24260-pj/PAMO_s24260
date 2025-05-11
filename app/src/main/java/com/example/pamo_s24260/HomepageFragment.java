@@ -17,13 +17,19 @@ public class HomepageFragment extends Fragment {
             ViewGroup container,
             Bundle savedInstanceState
     ) {
-        View view =  inflater.inflate(R.layout.fragment_homepage, container, false);
+        View view = inflater.inflate(R.layout.fragment_homepage, container, false);
 
-        final TextView firstTextView = view.findViewById(R.id.button_bmi_calculator);
-        firstTextView.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.homepage_to_bmi_calculator_action));
+        final TextView bmiCalculatorButton = view.findViewById(R.id.button_bmi_calculator);
+        bmiCalculatorButton.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.homepage_to_bmi_calculator_action));
 
-        final TextView secondTextView = view.findViewById(R.id.button_calorie_calculator);
-        secondTextView.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.homepage_to_calories_calculator_action));
+        final TextView calorieCalculatorButton = view.findViewById(R.id.button_calorie_calculator);
+        calorieCalculatorButton.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.homepage_to_calories_calculator_action));
+
+        final TextView shoppingListButton = view.findViewById(R.id.button_shopping_list);
+        shoppingListButton.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.homepage_to_shopping_list_action));
+
+        final TextView bmiChartButton = view.findViewById(R.id.button_bmi_chart);
+        bmiChartButton.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.homepage_to_bmi_chart_action));
 
         return view;
     }

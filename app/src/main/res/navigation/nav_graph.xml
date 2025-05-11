@@ -36,6 +36,12 @@
         <action
             android:id="@+id/homepage_to_calories_calculator_action"
             app:destination="@id/caloriesCalculatorFragment" />
+        <action
+            android:id="@+id/homepage_to_shopping_list_action"
+            app:destination="@id/shoppingListFragment" />
+        <action
+            android:id="@+id/homepage_to_bmi_chart_action"
+            app:destination="@id/bmiChartFragment" />
     </fragment>
     <fragment
         android:id="@+id/caloriesCalculatorFragment"
@@ -56,4 +62,14 @@
             android:name="totalDailyEnergyExpenditure"
             app:argType="float" />
     </fragment>
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="com.example.pamo_s24260.ShoppingListFragment"
+        android:label="@string/shopping_list"
+        tools:layout="@layout/fragment_shopping_list" />
+    <fragment
+        android:id="@+id/bmiChartFragment"
+        android:name="com.example.pamo_s24260.BmiChartFragment"
+        android:label="@string/bmi_chart_in_time"
+        tools:layout="@layout/fragment_bmi_chart" />
 </navigation>
