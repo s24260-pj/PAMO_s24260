@@ -36,4 +36,8 @@
 
     <string name="caloric_requirement_text">Twoje zapotrzebowanie kaloryczne: %1$d kcal</string>
     <string name="recipe_item_text">- %1$s (%2$d kcal)\n  %3$s\n  Autor: %4$s</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shopping_list">Lista zakupowa</string>
+    <string name="bmi_chart_in_time">Wykres BMI w czasie</string>
 </resources>

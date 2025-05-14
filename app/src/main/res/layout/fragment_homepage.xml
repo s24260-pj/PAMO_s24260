@@ -45,4 +45,27 @@
         app:layout_constraintTop_toBottomOf="@+id/button_bmi_calculator"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/button_shopping_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/shopping_list"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_calorie_calculator"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_bmi_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/bmi_chart_in_time"
+        android:textSize="32sp"
+        app:layout_constraintTop_toBottomOf="@+id/button_shopping_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
