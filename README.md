@@ -38,6 +38,9 @@ Artur Szulc s24260@pjwstk.edu.pl
 ![image](https://github.com/user-attachments/assets/9851f725-b011-4c2c-a795-3b8b172efea7)
 ![image](https://github.com/user-attachments/assets/cc694029-9c94-45e1-bc20-70baee884c30)
 ![image](https://github.com/user-attachments/assets/1b44b241-b2bf-4c4d-91af-1c95715689d5)
+![image](https://github.com/user-attachments/assets/b23127cb-293d-46df-a279-b0a35610226a)
+![image](https://github.com/user-attachments/assets/88276417-6b06-4ea4-b01b-2b7697a048fd)
+
 
 ## Monkey result
 ![Zrzut ekranu z 2025-04-23 21-43-08](https://github.com/user-attachments/assets/3c91df2b-8ec0-4f55-a8c3-e46494d882db)
