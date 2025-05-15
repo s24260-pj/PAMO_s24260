@@ -1,66 +1,86 @@
 package com.example.pamo_s24260.kotlin_excercises
 
+/**
+ * A class containing a collection of small Kotlin exercises
+ * demonstrating basic language features such as variables, collections,
+ * control flow, lambdas, and null safety.
+ */
 class Exercises {
+
     /**
      * Exercise 1
-     * Complete the code to make the program print "Mary is 20 years old" to standard output.
+     *
+     * Prints a formatted string containing a name and age.
+     * Expected output: "Mary is 20 years old"
      */
-    fun printPersonInfo() {
+    fun printPersonInfo(): Unit {
         val name = "Mary"
         val age = 20
         println("$name is $age years old")
+        return
     }
+
     /**
      * Exercise 2
-     * Explicitly declare the correct type for each variable.
+     *
+     * Declares several variables with explicit type annotations.
      */
-    fun declareVariableTypes() {
+    fun declareVariableTypes(): Unit {
         val a: Int = 1000
         val b: String = "log message"
         val c: Double = 3.14
         val d: Long = 100_000_000_000_000
         val e: Boolean = false
         val f: Char = '\n'
+        return
     }
 
     /**
      * Exercise 3
-     * You have a list of “green” numbers and a list of “red” numbers. Complete the code to print how many numbers there are in total
+     *
+     * Counts and prints the total number of elements in two lists.
      */
-    fun countNumbersInLists() {
+    fun countNumbersInLists(): Unit {
         val greenNumbers = listOf(1, 4, 23)
         val redNumbers = listOf(17, 2)
         val totalCount = greenNumbers.count() + redNumbers.count()
         println(totalCount)
+        return
     }
 
     /**
      * Exercise 4
-     * You have a set of protocols supported by your server. A user requests to use a particular protocol. Complete the program to check whether the requested protocol
-     * is supported or not (isSupported must be a Boolean value).
+     *
+     * Checks whether a requested protocol is supported by the server.
+     * Prints true or false accordingly.
      */
-    fun checkProtocolSupport() {
+    fun checkProtocolSupport(): Unit {
         val SUPPORTED = setOf("HTTP", "HTTPS", "FTP")
         val requested = "smtp"
         val isSupported = requested.uppercase() in SUPPORTED
         println("Support for $requested: $isSupported")
+        return
     }
 
     /**
      * Exercise 5
-     * Define a map that relates integer numbers from 1 to 3 to their corresponding spelling. Use this map to spell the given number.
+     *
+     * Maps numbers 1 to 3 to their word representations and prints the
+     * word for a selected number.
      */
-    fun spellNumber() {
+    fun spellNumber(): Unit {
         val number2word = mapOf(1 to "one", 2 to "two", 3 to "three")
         val n = 2
         println("$n is spelt as '${number2word[n]}'")
+        return
     }
 
     /**
      * Exercise 6
-     * Prints the corresponding actions when you input the names of game console buttons
+     *
+     * Prints an action based on a button pressed using a when expression.
      */
-    fun buttonAction() {
+    fun buttonAction(): Unit {
         val button = "A"
         println(
             when (button) {
@@ -71,30 +91,35 @@ class Exercises {
                 else -> "There is no such button"
             }
         )
+        return
     }
 
     /**
      * Exercise 7
-     * You have a program that counts pizza slices until there’s a whole pizza with 8 slices.
+     *
+     * Increments a pizza slice counter until there are 8 slices,
+     * printing progress along the way.
      */
-    fun countPizzaSlices() {
+    fun countPizzaSlices(): Unit {
         var pizzaSlices = 0
         pizzaSlices++
 
         do {
             println("There's only $pizzaSlices slice/s of pizza :(")
             pizzaSlices++
-        } while ( pizzaSlices < 8 )
+        } while (pizzaSlices < 8)
 
         println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
+        return
     }
 
     /**
      * Exercise 8
-     * Write a program that simulates the Fizz buzz game. Your task is to print numbers from 1 to 100 incrementally, replacing any number divisible by three with the word
-     * "fizz", and any number divisible by five with the word "buzz". Any number divisible by both 3 and 5 must be replaced with the word "fizzbuzz".
+     *
+     * Simulates the FizzBuzz game, printing numbers from 1 to 100
+     * with substitutions for multiples of 3, 5, and both.
      */
-    fun playFizzBuzz() {
+    fun playFizzBuzz(): Unit {
         for (number in 1..100) {
             println(
                 when {
@@ -105,57 +130,73 @@ class Exercises {
                 }
             )
         }
+        return
     }
 
     /**
      * Exercise 9
-     * You have a list of words. Use for and if to print only the words that start with the letter l.
+     *
+     * Prints only the words that start with the letter 'l' from a list.
      */
-    fun printWordsStartingWithL() {
+    fun printWordsStartingWithL(): Unit {
         val words = listOf("dinosaur", "limousine", "magazine", "language")
         for (w in words) {
             if (w.startsWith("l"))
                 println(w)
         }
+        return
     }
 
     /**
      * Exercise 10
-     * You have a list of actions supported by a web service, a common prefix for all requests, and an ID of a particular resource. To request an action title over the
-     * resource with ID: 5, you need to create the following URL: https://example.com/book-info/5/title. Use a lambda expression to create a list of URLs from the list of
-     * actions.
+     *
+     * Generates and prints URLs by combining actions with a given
+     * prefix and resource ID using a lambda expression.
      */
-    fun generateActionUrls() {
+    fun generateActionUrls(): Unit {
         val actions = listOf("title", "year", "author")
         val prefix = "https://example.com/book-info"
         val id = 5
         val urls = actions.map { action -> "$prefix/$id/$action" }
         println(urls)
+        return
     }
 
     /**
      * Exercise 11
-     * Write a function that takes an Int value and an action (a function with type () -> Unit) which then repeats the action the given number of times. Then use this function
-     * to print “Hello” 5 times.
+     *
+     * Repeats a given action a specified number of times.
+     *
+     * @param n Number of times to repeat the action.
+     * @param action Lambda function to be executed.
      */
-    fun repeatActionNTimes(n: Int, action: () -> Unit) {
+    fun repeatActionNTimes(n: Int, action: () -> Unit): Unit {
         for (i in 1..n) {
             action()
         }
+        return
     }
 
     /**
      * Exercise 12
-     * You have the employeeById function that gives you access to a database of employees of a company. Unfortunately, this function returns a value of the Employee?
-     * type, so the result can be null. Your goal is to write a function that returns the salary of an employee when their id is provided, or 0 if the employee is missing from
-     * the database.
+     *
+     * Retrieves the salary of an employee by ID. Returns 0 if the employee is not found.
+     *
+     * @param id The ID of the employee.
+     * @return The salary of the employee or 0 if not found.
      */
     fun getEmployeeSalaryById(id: Int): Int {
         val employee = employeeById(id)
         return employee?.salary ?: 0
     }
 
-    fun employeeById(id: Int): Employee? = when(id) {
+    /**
+     * Returns an [Employee] object based on the provided ID or null if not found.
+     *
+     * @param id The ID of the employee.
+     * @return [Employee]? or null if no match.
+     */
+    fun employeeById(id: Int): Employee? = when (id) {
         1 -> Employee("Mary", 20)
         2 -> null
         3 -> Employee("John", 21)
@@ -163,3 +204,4 @@ class Exercises {
         else -> null
     }
 }
+
